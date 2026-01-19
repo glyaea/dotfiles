@@ -2,8 +2,8 @@
 	"breadcrumbs.enabled": false,
 	"chat.commandCenter.enabled": false,
 	"editor.detectIndentation": false,
-	"editor.fontFamily": "Google Sans Code",
-	"editor.fontSize": 13,
+	"editor.fontFamily": "SF Mono, Google Sans Code",
+	"editor.fontSize": 14,
 	"editor.formatOnPaste": false,
 	"editor.formatOnSave": false,
 	"editor.formatOnType": false,
@@ -11,7 +11,6 @@
 	"editor.guides.indentation": false,
 	"editor.indentSize": 4,
 	"editor.insertSpaces": false,
-	"editor.minimap.autohide": "mouseover",
 	"editor.occurrencesHighlight": "off",
 	"editor.padding.bottom": 4,
 	"editor.padding.top": 4,
@@ -54,19 +53,17 @@
 	"update.showReleaseNotes": false,
 	"window.commandCenter": false,
 	"workbench.colorCustomizations": {
-		"editor.lineHighlightBackground": "#00000000",
+		// "editor.lineHighlightBackground": "#00000000",
 		"editor.lineHighlightBorder": "#00000000",
 		"notebook.cellBorderColor": "#222",
 		"notebook.focusedEditorBorder": "#444"
 	},
-	"workbench.colorTheme": "Anysphere",
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.editor.empty.hint": "hidden",
 	"workbench.editor.showTabs": "multiple",
-	"workbench.editorAssociations": {
-		"*.pdf": "latex-workshop-pdf-hook"
-	},
+	"workbench.editorAssociations": { "*.pdf": "latex-workshop-pdf-hook" },
 	"workbench.layoutControl.enabled": false,
 	"workbench.startupEditor": "none",
-	"workbench.tree.renderIndentGuides": "none"
+	"workbench.tree.renderIndentGuides": "none",
+	"workbench.colorTheme": "GitHub Light Colorblind (Beta)",
 }
