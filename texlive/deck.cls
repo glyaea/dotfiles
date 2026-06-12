@@ -1,7 +1,7 @@
 \LoadClass[
-  aspectratio=1610,
-  notheorems,
-  10pt
+	aspectratio=1610,
+	notheorems,
+	10pt
 ]{beamer}
 
 \usepackage{algorithm}
@@ -11,13 +11,6 @@
 \usepackage{xcolor}
 
 \definecolor{black}{HTML}{000000}
-\definecolor{mit}{HTML}{750014}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Z}{\mathbb{Z}}
-
 \usecolortheme[named=black]{structure}
 \useinnertheme{circles}
 \useoutertheme[subsection=false]{smoothbars}
