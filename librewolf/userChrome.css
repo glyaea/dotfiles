@@ -1,5 +1,23 @@
+:root {
+	--tab-min-height: calc(36px - 4px) !important;
+}
+
+#tabs-newtab-button {
+	display: none;
+}
+
 #urlbar-input {
 	text-indent: 4px;
+}
+
+.bookmark-item {
+	--toolbarbutton-active-background: transparent;
+	--toolbarbutton-hover-background: transparent;
+}
+
+.download-state {
+	--button-background-color-ghost-active: transparent;
+	--button-background-color-ghost-hover: transparent;
 }
 
 .subviewbutton {
@@ -11,20 +29,28 @@
 	box-shadow: none !important;
 }
 
-.tab-close-button:hover {
-	background-color: transparent !important;
+.tab-close-button {
+	display: none;
 }
 
 .tab-icon-image {
 	transform: translateX(2px);
 }
 
-.tab-label-container {
+.tabbrowser-tab[soundplaying] .tab-label-container {
+	margin-inline-start: -2px;
+}
+
+.tabbrowser-tab:not([soundplaying]) .tab-label-container {
 	margin-inline-start: 4px;
 }
 
 .tabbrowser-tab:hover {
 	--tab-hover-background-color: transparent;
+}
+
+.titlebar-spacer[type="pre-tabs"] {
+	width: calc(40px - 24px) !important;
 }
 
 .toolbarbutton-1 {
