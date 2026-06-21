@@ -1,59 +1,33 @@
-:root {
-	--button-active-bgcolor: transparent !important;
-	--button-hover-bgcolor: transparent !important;
-	--focus-outline-color: transparent !important;
-	--toolbar-field-focus-background-color: var(--toolbar-field-background-color) !important;
-	--toolbar-field-focus-border-color: transparent !important;
-	--toolbarbutton-active-background: transparent !important;
-	--toolbarbutton-hover-background: transparent !important;
+#urlbar-input {
+	text-indent: 4px;
 }
 
-#navigator-toolbox,
-#urlbar,
-#urlbar-background,
-#urlbar-container,
-#urlbar-input-container,
-#urlbar[focused],
-#urlbar[open] {
-	border-color: transparent !important;
+.subviewbutton {
+	--button-background-color-ghost-active: transparent;
+	--button-background-color-ghost-hover: transparent;
+}
+
+.subviewbutton:active {
 	box-shadow: none !important;
-	outline: 0 !important;
 }
 
-#private-browsing-indicator-with-label,
-.private-browsing-indicator,
-.private-browsing-indicator-with-label {
-	display: none !important;
-}
-
-#sidebar-main,
-#sidebar-main:hover {
-	max-width: 240px !important;
-	min-width: 240px !important;
-	width: 240px !important;
-}
-
-#urlbar-input::placeholder {
-	color: transparent !important;
-}
-
-#urlbar[focused] #urlbar-background {
-	border: 0 !important;
-}
-
-#urlbar-input,
-.tab-label-container {
-	margin-left: 4px !important;
-}
-
-.toolbarbutton-1:hover > :is(
-	.toolbarbutton-badge-stack,
-	.toolbarbutton-icon
-),
-toolbarbutton:hover > :is(
-	.toolbarbutton-badge-stack,
-	.toolbarbutton-icon,
-	.toolbarbutton-text
-) {
+.tab-close-button:hover {
 	background-color: transparent !important;
+}
+
+.tab-icon-image {
+	transform: translateX(2px);
+}
+
+.tab-label-container {
+	margin-inline-start: 4px;
+}
+
+.tabbrowser-tab:hover {
+	--tab-hover-background-color: transparent;
+}
+
+.toolbarbutton-1 {
+	--toolbarbutton-active-background: transparent;
+	--toolbarbutton-hover-background: transparent;
 }
