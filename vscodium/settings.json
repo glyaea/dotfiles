@@ -16,6 +16,7 @@
 	"editor.stickyScroll.enabled": false,
 	"editor.tabSize": 4,
 	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"editor.wordWrap": "on",
 	"explorer.confirmDelete": false,
 	"explorer.confirmPasteNative": false,
 	"extensions.ignoreRecommendations": true,
@@ -51,6 +52,5 @@
 	"workbench.editor.empty.hint": "hidden",
 	"workbench.layoutControl.enabled": false,
 	"workbench.startupEditor": "none",
-	"workbench.tree.renderIndentGuides": "none",
-	"workbench.colorTheme": "GitHub Light",
+	"workbench.tree.renderIndentGuides": "none"
 }
