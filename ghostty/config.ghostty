@@ -1,0 +1,6 @@
+cursor-style = underline
+cursor-style-blink = true
+font-family = SF Mono
+font-size = 16
+theme = Catppuccin Mocha
+window-padding-x = 32
