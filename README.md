@@ -1,9 +1,3 @@
-| App       | Version     |
-| --------- | ----------- |
-| LibreWolf | Latest      |
-| TeXLive   | Latest      |
-| VSCodium  | 1.107.18627 |
-
 # Git
 
 ```sh

@@ -1,9 +1,5 @@
 :root {
-	--tab-min-height: calc(36px - 4px) !important;
-}
-
-#tabs-newtab-button {
-	display: none;
+	--tab-min-height: calc(36px - 8px) !important;
 }
 
 #urlbar-input {
@@ -29,8 +25,8 @@
 	box-shadow: none !important;
 }
 
-.tab-close-button {
-	display: none;
+.tab-close-button:hover {
+	background-color: transparent !important;
 }
 
 .tab-icon-image {
