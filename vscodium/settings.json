@@ -33,10 +33,13 @@
 		"**/*.fdb_latexmk": true,
 		"**/*.fls": true,
 		"**/*.log": true,
+		"**/*.nav": true,
 		"**/*.out": true,
 		"**/*.run.xml": true,
+		"**/*.snm": true,
 		"**/*.synctex.gz": true,
 		"**/*.toc": true,
+		"**/*.vrb": true,
 		"**/node_modules": true
 	},
 	"files.insertFinalNewline": true,
