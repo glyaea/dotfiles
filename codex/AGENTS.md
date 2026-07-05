@@ -398,8 +398,8 @@ I use `uv` and `npm`.
         "Parameter B. Lorem ipsum dolor sit amet..."
     )
     ```
-- Avoid overly defensive checks or fallbacks.
-  - Reason: Exposed lines that fail when run are easier to reason about than guarded lines.
+- Prefer allowing for informative failure that makes future fixes step-wise and pedagogical, instead of minimising failure chances by building a wall from the start.
+  Avoid overly defensive checks or fallbacks.
 - Avoid unneeded arguments.
   Check argument necessity against docs.
   - Bad example: `npm --yes md-to-pdf`.
