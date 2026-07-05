@@ -57,6 +57,8 @@ I use `uv` and `npm`.
 
 # Coding
 
+- Use terminal freely with privacy in mind.
+  Avoid leaking potentially sensitive information like secrets (e.g. API keys) into chat.
 - If a parameter looks like it could be arbitrary (e.g. a "magic number"), check if there is a (1) code default or (2) strong community recommendation you could use.
   - Bad example:
     ```
@@ -403,6 +405,14 @@ I use `uv` and `npm`.
   - Bad example: `npm --yes md-to-pdf`.
   - Good example: `npm md-to-pdf`.
 - Use `uv run python` or `uvx`.
+
+## Bug-Fixing
+
+- Use the terminal as needed (e.g. immediately) after a tweak.
+  Prefer verifiable tool outputs over educated guesses.
+- Ensure tweaks are targeted.
+  Avoid changing Y (i.e. halt progress after changing X) if the hypothesis is X.
+  - Reason: Changing more than needed only decreases informativity and increases complexity.
 
 If you have legitimate concerns or questions while working, halt to raise them early instead of consuming more tokens.
 Before finishing work, quickly check that all requirements are satisfied.
