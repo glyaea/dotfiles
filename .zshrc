@@ -9,7 +9,10 @@ alphabetize() {
 }
 
 command_not_found_handler() {
-	[ "${1#.}" != "$1" ] || return 127
+	[ "${1#.}" != "$1" ] || {
+		printf "zsh: command not found: %s\n" "$1" >&2
+		return 127
+	}
 	gh repo clone "$(gh api user -q .login)/${1#.}"
 }
 
@@ -28,7 +31,7 @@ meta() {
 }
 
 resource() {
-	source ~/.zshrc
+	. ~/.zshrc
 }
 
 size() {
@@ -60,3 +63,5 @@ vault() {
 			;;
 	esac
 }
+
+date
