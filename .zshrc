@@ -53,13 +53,13 @@ vault() {
 	case "$1" in
 		enter)
 			age -d vault | tar -xf -
-			read -q "x?rm? " || return
+			read -q "x?delete vault? " || return
 			print "\n"
 			rm vault
 			;;
 		exit)
 			tar --exclude-vcs -cf - . | age -p -o vault
-			read -q "x?rm -rf? " || return
+			read -q "x?delete all but vault? " || return
 			print "\n"
 			setopt local_options extended_glob
 			rm -rf -- ^(vault|.git)(DN)
