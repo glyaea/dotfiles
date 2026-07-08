@@ -27,6 +27,10 @@ meta() {
 	exiftool "$1"
 }
 
+resource() {
+	source ~/.zshrc
+}
+
 size() {
 	du -sm "$1" | cut -f 1 | sed "s/$/ MB/"
 }
@@ -39,15 +43,20 @@ untargz() {
 	tar -xf "$1"
 }
 
-unvault() {
-	age -d .tar.age | tar -xf -
-	read -q "x?rm? " || return
-	rm .tar.age
-}
-
 vault() {
-	tar --exclude-vcs -cf - . | age -p -o .tar.age
-	read -q "x?rm? " || return
-	setopt local_options extended_glob
-	rm -rf -- ^.tar.age(N)
+	case "$1" in
+		enter)
+			age -d vault | tar -xf -
+			read -q "x?rm? " || return
+			print "\n"
+			rm vault
+			;;
+		exit)
+			tar --exclude-vcs -cf - . | age -p -o vault
+			read -q "x?rm -rf? " || return
+			print "\n"
+			setopt local_options extended_glob
+			rm -rf -- ^vault(DN)
+			;;
+	esac
 }
