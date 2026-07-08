@@ -1,9 +1,3 @@
-# Git
-
-```sh
-git config --global alias.cem "commit --allow-empty-message --no-edit"
-```
-
 # LibreWolf
 
 To install, run:
