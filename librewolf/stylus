@@ -1,0 +1,21 @@
+@-moz-document domain("overleaf.com") {
+div.canvasWrapper canvas {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1) !important;
+}
+}
+
+@-moz-document domain("reddit.com") {
+div.left-sidebar {
+    display: none;
+}
+
+div.right-sidebar {
+    display: none;
+}
+}
+
+@-moz-document domain("twitch.tv") {
+footer#twilight-sticky-footer-root {
+    display: none;
+}
+}
