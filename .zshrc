@@ -27,6 +27,18 @@ meta() {
 	exiftool "$1"
 }
 
+size() {
+	du -sm "$1" | cut -f 1 | sed "s/$/ MB/"
+}
+
+targz() {
+	tar -czf - "$1" | pv -s "$(du -sk "$1" | cut -f 1)k" > "$1.tar.gz"
+}
+
+untargz() {
+	tar -xf "$1"
+}
+
 unvault() {
 	age -d .tar.age | tar -xf -
 	read -q "x?rm? " || return
