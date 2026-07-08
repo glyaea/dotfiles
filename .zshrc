@@ -10,10 +10,17 @@ alphabetize() {
 
 command_not_found_handler() {
 	[ "${1#.}" != "$1" ] || {
-		printf "zsh: command not found: %s\n" "$1" >&2
+		printf "command not found: %s\n" "$1" >&2
 		return 127
 	}
 	gh repo clone "$(gh api user -q .login)/${1#.}"
+}
+
+config() {
+	case "$1" in
+		open) open ~/.zshrc ;;
+		reload) . ~/.zshrc ;;
+	esac
 }
 
 decache() {
@@ -28,10 +35,6 @@ meta() {
 		return
 	fi
 	exiftool "$1"
-}
-
-resource() {
-	. ~/.zshrc
 }
 
 size() {
@@ -59,7 +62,7 @@ vault() {
 			read -q "x?rm -rf? " || return
 			print "\n"
 			setopt local_options extended_glob
-			rm -rf -- ^vault(DN)
+			rm -rf -- ^(vault|.git)(DN)
 			;;
 	esac
 }
