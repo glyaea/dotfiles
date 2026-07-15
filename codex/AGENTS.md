@@ -405,9 +405,6 @@ I use `uv` and `npm`.
   - Bad example: `npm --yes md-to-pdf`.
   - Good example: `npm md-to-pdf`.
 - Use `uv run python` or `uvx`.
-
-## Bug-Fixing
-
 - Use the terminal as needed (e.g. immediately) after a tweak.
   Prefer verifiable tool outputs over educated guesses.
 - Ensure tweaks are targeted.
