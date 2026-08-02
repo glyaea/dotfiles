@@ -1,70 +1,22 @@
 . "$HOME/.env"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 git config --global alias.cem "commit --allow-empty-message --no-edit"
-PROMPT="%~ %F{green}$%f "
 
-alphabetize() {
+compress() {
+	tar -czf - "$1" | pv -s "$(du -sk "$1" | cut -f 1)k" > "$1.tar.gz"
+}
+
+extract() {
+	tar -xf "$1"
+}
+
+order() {
 	printf %s "$1" | grep -o . | sort | tr -d "\n"
 	printf "\n"
 }
 
-command_not_found_handler() {
-	[ "${1#.}" != "$1" ] || {
-		printf "command not found: %s\n" "$1" >&2
-		return 127
-	}
-	gh repo clone "$(gh api user -q .login)/${1#.}"
-}
-
-config() {
-	case "$1" in
-		open) open ~/.zshrc ;;
-		reload) . ~/.zshrc ;;
-	esac
-}
-
-decache() {
-	brew cleanup --prune=all
-	npm cache clean --force
-	uv cache clean
-}
-
-meta() {
-	if [ -d "$1" ]; then
-		exiftool -r "$1"
-		return
-	fi
-	exiftool "$1"
-}
-
-size() {
+sizeof() {
 	du -sm "$1" | cut -f 1 | sed "s/$/ MB/"
-}
-
-targz() {
-	tar -czf - "$1" | pv -s "$(du -sk "$1" | cut -f 1)k" > "$1.tar.gz"
-}
-
-untargz() {
-	tar -xf "$1"
-}
-
-vault() {
-	case "$1" in
-		enter)
-			age -d vault | tar -xf -
-			read -q "x?delete vault? " || return
-			print "\n"
-			rm vault
-			;;
-		exit)
-			tar --exclude-vcs -cf - . | age -p -o vault
-			read -q "x?delete all but vault? " || return
-			print "\n"
-			setopt local_options extended_glob
-			rm -rf -- ^(vault|.git)(DN)
-			;;
-	esac
 }
 
 date
