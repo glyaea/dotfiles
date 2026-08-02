@@ -1,5 +1,4 @@
 . "$HOME/.env"
-eval "$(/opt/homebrew/bin/brew shellenv)"
 git config --global alias.cem "commit --allow-empty-message --no-edit"
 
 compress() {
