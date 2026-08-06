@@ -210,8 +210,8 @@ def get_emails(users):
 def send_email(users):
   emails = get_emails(users)
   email.send(
-      to=emails,
-      content="Welcome!"
+    to=emails,
+    content="Welcome!"
   )
 ```
 Good:
@@ -219,7 +219,7 @@ Good:
 def send_email(users):
   email.send(
     to=[user.email for user in users],
-      content="Welcome!"
+    content="Welcome!"
   )
 ```
 Use a verb-noun convention for function names.
